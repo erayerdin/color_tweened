@@ -1,0 +1,49 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.iml": true,
+        ".dart_tool": true,
+        "android/gradle": true,
+        "android/**/gradlew*": true,
+        ".idea": true,
+        ".metadata": true,
+        ".packages": true,
+        "**/*.lock": true,
+        "build": true,
+        "**/*.freezed.dart": true,
+        "**/*.g.dart": true,
+        "**/*.gr.dart": true,
+        ".flutter-plugins": true,
+        ".flutter-plugins-dependencies": true,
+        "**/node_modules": true,
+        "**/package-lock.json": true,
+        "android/.gradle": true,
+        "android/**/*.properties": true,
+        "**/*.log": true,
+        "firebase/data": true,
+        "firebase-export-*": true,
+        "**/*.mocks.dart": true,
+        "functions/lib": true
+    },
+    "explorerExclude.backup": {},
+    "licenser.license": "MIT",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+    },
+    "licenser.customHeaderFile": "LICENSE",
+    "task.allowAutomaticTasks": "on",
+    "eslint.workingDirectories": ["functions", "ts_functions"],
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    }
+}

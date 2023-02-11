@@ -3,12 +3,11 @@ description: Widgets that change colors during a duration
 homepage: https://github.com/erayerdin/color_tweened
 issue_tracker: https://github.com/erayerdin/color_tweened/issues/
 repository: https://github.com/erayerdin/color_tweened
-version: 0.1.0+1
-publish_to: none
+version: 0.1.0
 
 environment:
   sdk: ">=2.19.0 <3.0.0"
-  flutter: 3.7.0
+  flutter: ">=3.7.0"
 
 dependencies:
   flutter:

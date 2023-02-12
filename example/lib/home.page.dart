@@ -87,8 +87,8 @@ class HomePage extends StatelessWidget {
         ).paddingAll(16),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
-            ColorTweenedCircularProgressIndicator(
+          children: [
+            const ColorTweenedCircularProgressIndicator(
               startColor: _startColor,
               endColor: _endColor,
               duration: _duration,
@@ -99,6 +99,22 @@ class HomePage extends StatelessWidget {
             //   endColor: _endColor,
             //   duration: _duration,
             // ),
+            ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: 250,
+              ),
+              child: const ColorTweenedLinearProgressIndicator(
+                startColor: _startColor,
+                endColor: _endColor,
+                duration: _duration,
+              ),
+              // or as an extension
+              // child: const LinearProgressIndicator().colorTweened(
+              //   startColor: _startColor,
+              //   endColor: _endColor,
+              //   duration: _duration,
+              // ),
+            ),
           ],
         ),
       ],

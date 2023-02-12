@@ -105,3 +105,27 @@ class _ColorTweenedIconState extends State<ColorTweenedIcon>
     );
   }
 }
+
+/// An extension to change Icon to ColorTweenedIcon.
+extension ColorTweenedIconExt on Icon {
+  ColorTweenedIcon colorTweened({
+    required Color startColor,
+    required Color endColor,
+    required Duration duration,
+  }) {
+    return ColorTweenedIcon(
+      icon,
+      startColor: startColor,
+      endColor: endColor,
+      duration: duration,
+      fill: fill,
+      grade: grade,
+      opticalSize: opticalSize,
+      semanticLabel: semanticLabel,
+      shadows: shadows,
+      size: size,
+      textDirection: textDirection,
+      weight: weight,
+    );
+  }
+}

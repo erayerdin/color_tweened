@@ -39,41 +39,37 @@ class HomePage extends StatelessWidget {
         ).paddingAll(16),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
-            ColorTweenedIcon(
+          children: [
+            // with ColorTweenedIcon
+            const ColorTweenedIcon(
               Icons.favorite_rounded,
               startColor: _startColor,
               endColor: _endColor,
               duration: _duration,
               size: _iconSize,
             ),
-            ColorTweenedIcon(
+            const ColorTweenedIcon(
               Icons.thumb_up_rounded,
               startColor: _startColor,
               endColor: _endColor,
               duration: _duration,
               size: _iconSize,
             ),
-            ColorTweenedIcon(
-              Icons.play_arrow_rounded,
+            // with extension
+            const Icon(Icons.play_arrow_rounded).colorTweened(
               startColor: _startColor,
               endColor: _endColor,
               duration: _duration,
-              size: _iconSize,
             ),
-            ColorTweenedIcon(
-              Icons.pause_rounded,
+            const Icon(Icons.pause_rounded).colorTweened(
               startColor: _startColor,
               endColor: _endColor,
               duration: _duration,
-              size: _iconSize,
             ),
-            ColorTweenedIcon(
-              Icons.stop_rounded,
+            const Icon(Icons.stop_rounded).colorTweened(
               startColor: _startColor,
               endColor: _endColor,
               duration: _duration,
-              size: _iconSize,
             ),
           ],
         ),

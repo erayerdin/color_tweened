@@ -5,12 +5,12 @@
 
 import 'package:flutter/material.dart';
 
-/// A circular progress indicator that change colors during a provided duration.
-/// See official [CircularProgressIndicator](https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html)
+/// A linear progress indicator that change colors during a provided duration.
+/// See official [LinearProgressIndicator](https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html)
 /// class for detailed description.
-class ColorTweenedCircularProgressIndicator extends StatefulWidget {
+class ColorTweenedLinearProgressIndicator extends StatefulWidget {
   // ignore: public_member_api_docs
-  const ColorTweenedCircularProgressIndicator({
+  const ColorTweenedLinearProgressIndicator({
     required this.startColor,
     required this.endColor,
     required this.duration,
@@ -18,7 +18,7 @@ class ColorTweenedCircularProgressIndicator extends StatefulWidget {
     this.value,
     this.backgroundColor,
     this.valueColor,
-    this.strokeWidth = 4.0,
+    this.minHeight,
     this.semanticsLabel,
     this.semanticsValue,
   });
@@ -39,19 +39,19 @@ class ColorTweenedCircularProgressIndicator extends StatefulWidget {
   // ignore: public_member_api_docs
   final Animation<Color?>? valueColor;
   // ignore: public_member_api_docs
-  final double strokeWidth;
+  final double? minHeight;
   // ignore: public_member_api_docs
   final String? semanticsLabel;
   // ignore: public_member_api_docs
   final String? semanticsValue;
 
   @override
-  State<ColorTweenedCircularProgressIndicator> createState() =>
-      _ColorTweenedCircularProgressIndicatorState();
+  State<ColorTweenedLinearProgressIndicator> createState() =>
+      _ColorTweenedLinearProgressIndicatorState();
 }
 
-class _ColorTweenedCircularProgressIndicatorState
-    extends State<ColorTweenedCircularProgressIndicator>
+class _ColorTweenedLinearProgressIndicatorState
+    extends State<ColorTweenedLinearProgressIndicator>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<Color?> _colorTween;
@@ -81,37 +81,36 @@ class _ColorTweenedCircularProgressIndicatorState
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _colorTween,
-      builder: (context, child) => CircularProgressIndicator(
-        color: _colorTween.value,
-        value: widget.value,
+      builder: (contex, child) => LinearProgressIndicator(
         backgroundColor: widget.backgroundColor,
-        valueColor: widget.valueColor,
-        strokeWidth: widget.strokeWidth,
+        color: _colorTween.value,
+        minHeight: widget.minHeight,
         semanticsLabel: widget.semanticsLabel,
         semanticsValue: widget.semanticsValue,
+        value: widget.value,
+        valueColor: widget.valueColor,
       ),
     );
   }
 }
 
-/// An extension to change CircularProgressIndicator to
-/// ColorTweenedCircularProgressIndicator.
-extension ColorTweenedCircularProgressIndicatorExt
-    on CircularProgressIndicator {
-  /// Change CircularProgressIndicator to ColorTweenedCircularProgressIndicator.
-  ColorTweenedCircularProgressIndicator colorTweened({
+/// An extension to change LinearProgressIndicator to
+/// ColorTweenedLinearProgressIndicator.
+extension ColorTweenedLinearProgressIndicatorExt on LinearProgressIndicator {
+  /// Change LinearProgressIndicator to ColorTweenedLinearProgressIndicator.
+  ColorTweenedLinearProgressIndicator colorTweened({
     required Color startColor,
     required Color endColor,
     required Duration duration,
   }) {
-    return ColorTweenedCircularProgressIndicator(
+    return ColorTweenedLinearProgressIndicator(
       startColor: startColor,
       endColor: endColor,
       duration: duration,
       backgroundColor: backgroundColor,
+      minHeight: minHeight,
       semanticsLabel: semanticsLabel,
       semanticsValue: semanticsValue,
-      strokeWidth: strokeWidth,
       value: value,
       valueColor: valueColor,
     );

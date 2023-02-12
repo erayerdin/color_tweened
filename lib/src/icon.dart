@@ -88,20 +88,18 @@ class _ColorTweenedIconState extends State<ColorTweenedIcon>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _colorTween,
-      builder: (context, child) {
-        return Icon(
-          widget.icon,
-          color: _colorTween.value,
-          fill: widget.fill,
-          grade: widget.grade,
-          opticalSize: widget.opticalSize,
-          semanticLabel: widget.semanticLabel,
-          shadows: widget.shadows,
-          size: widget.size,
-          textDirection: widget.textDirection,
-          weight: widget.weight,
-        );
-      },
+      builder: (context, child) => Icon(
+        widget.icon,
+        color: _colorTween.value,
+        fill: widget.fill,
+        grade: widget.grade,
+        opticalSize: widget.opticalSize,
+        semanticLabel: widget.semanticLabel,
+        shadows: widget.shadows,
+        size: widget.size,
+        textDirection: widget.textDirection,
+        weight: widget.weight,
+      ),
     );
   }
 }

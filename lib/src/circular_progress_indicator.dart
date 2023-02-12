@@ -81,17 +81,15 @@ class _ColorTweenedCircularProgressIndicatorState
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _colorTween,
-      builder: (context, child) {
-        return CircularProgressIndicator(
-          color: _colorTween.value,
-          value: widget.value,
-          backgroundColor: widget.backgroundColor,
-          valueColor: widget.valueColor,
-          strokeWidth: widget.strokeWidth,
-          semanticsLabel: widget.semanticsLabel,
-          semanticsValue: widget.semanticsValue,
-        );
-      },
+      builder: (context, child) => CircularProgressIndicator(
+        color: _colorTween.value,
+        value: widget.value,
+        backgroundColor: widget.backgroundColor,
+        valueColor: widget.valueColor,
+        strokeWidth: widget.strokeWidth,
+        semanticsLabel: widget.semanticsLabel,
+        semanticsValue: widget.semanticsValue,
+      ),
     );
   }
 }

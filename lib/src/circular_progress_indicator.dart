@@ -23,8 +23,13 @@ class ColorTweenedCircularProgressIndicator extends StatefulWidget {
     this.semanticsValue,
   });
 
+  /// Starting color of this widget.
   final Color startColor;
+
+  /// Ending color of this widget.
   final Color endColor;
+
+  /// The duration it takes to change from starting color to the ending color.
   final Duration duration;
 
   // ignore: public_member_api_docs

@@ -6,7 +6,7 @@
 import 'package:flutter/material.dart';
 
 /// A circular progress indicator that change colors during a provided duration.
-/// See official [CircularProgressIndicator](https://api.flutter.dev/flutter/widgets/Icon-class.html)
+/// See official [CircularProgressIndicator](https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html)
 /// class for detailed description.
 class ColorTweenedCircularProgressIndicator extends StatefulWidget {
   // ignore: public_member_api_docs

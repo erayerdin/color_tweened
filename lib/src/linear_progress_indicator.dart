@@ -94,7 +94,10 @@ class _ColorTweenedLinearProgressIndicatorState
   }
 }
 
+/// An extension to change LinearProgressIndicator to
+/// ColorTweenedLinearProgressIndicator.
 extension ColorTweenedLinearProgressIndicatorExt on LinearProgressIndicator {
+  /// Change LinearProgressIndicator to ColorTweenedLinearProgressIndicator.
   ColorTweenedLinearProgressIndicator colorTweened({
     required Color startColor,
     required Color endColor,

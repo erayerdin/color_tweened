@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           _buildIcons(context),
+          _buildProgressIndicators(context),
         ],
       ).paddingAll(16),
     );
@@ -71,6 +72,33 @@ class HomePage extends StatelessWidget {
               endColor: _endColor,
               duration: _duration,
             ),
+          ],
+        ),
+      ],
+    ).paddingAll(16);
+  }
+
+  Widget _buildProgressIndicators(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          'ColorTweenedCircularProgressIndicator Examples',
+          style: Theme.of(context).textTheme.headlineLarge,
+        ).paddingAll(16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            ColorTweenedCircularProgressIndicator(
+              startColor: _startColor,
+              endColor: _endColor,
+              duration: _duration,
+            ),
+            // or as an extension
+            // const CircularProgressIndicator().colorTweened(
+            //   startColor: _startColor,
+            //   endColor: _endColor,
+            //   duration: _duration,
+            // ),
           ],
         ),
       ],

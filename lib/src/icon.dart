@@ -108,6 +108,7 @@ class _ColorTweenedIconState extends State<ColorTweenedIcon>
 
 /// An extension to change Icon to ColorTweenedIcon.
 extension ColorTweenedIconExt on Icon {
+  /// Change Icon to ColorTweenedIcon.
   ColorTweenedIcon colorTweened({
     required Color startColor,
     required Color endColor,

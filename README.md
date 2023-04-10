@@ -14,17 +14,10 @@ This package is in **early release stage** and will be updated frequently.
 
 **❗ In order to start using Color Tweened you must have the [Flutter SDK][flutter_install_link] installed on your machine.**
 
-Add `color_tweened` to your `pubspec.yaml`:
-
-```yaml
-dependencies:
-  color_tweened:
-```
-
-Install it:
+Add `color_tweened` to your `pubspec.yaml`and install it:
 
 ```sh
-flutter packages get
+flutter pub add color_tweened
 ```
 
 [flutter_install_link]: https://docs.flutter.dev/get-started/install
